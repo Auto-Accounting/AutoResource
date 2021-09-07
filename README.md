@@ -1,0 +1,2 @@
+# AutoResource
+AutoResource
