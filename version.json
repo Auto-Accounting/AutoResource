@@ -12,9 +12,9 @@
     "download": ""
   },
   "alpha": {
-    "version": "涅槃 3.0.0 alpha18",
-    "verNum": 120,
-    "log": "涅槃3.0.0 alpha18\n\n优化：支持将单个规则导出为文件；\n\n优化：规则文档命名；\n\n优化：部分文案错别字；\n\n修复：日志出现崩溃异常；\n\n修复：通知Hook出现错误;\n\n修复：微信hook的异常；\n\n其他：通知hook似乎并没有生效，我再研究看看~2021-09-16",
+    "version": "涅槃 3.0.0 alpha19",
+    "verNum": 122,
+    "log": "涅槃3.0.0 alpha20\n\n新增：监控APP（通知消息需要选择要监控的APP，不然可能一个都收不到）\n\n新增：短信监控不需要开启短信权限（支持直接hook）\n\n修复：JS执行错误\n\n修复：激活问题\n\n修复：通知Hook失败的问题\n\n修复：通知无法hook到的问题\n\n2021-09-18",
     "download": "https://jq.qq.com/?_wv=1027&k=qVkARWOX"
   },
   "inherit": true
