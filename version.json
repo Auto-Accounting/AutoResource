@@ -13,8 +13,8 @@
   },
   "alpha": {
     "version": "涅槃 3.0.0 alpha19",
-    "verNum": 122,
-    "log": "涅槃3.0.0 alpha20\n\n新增：监控APP（通知消息需要选择要监控的APP，不然可能一个都收不到）\n\n新增：短信监控不需要开启短信权限（支持直接hook）\n\n修复：JS执行错误\n\n修复：激活问题\n\n修复：通知Hook失败的问题\n\n修复：通知无法hook到的问题\n\n2021-09-18",
+    "verNum": 123,
+    "log": "涅槃3.0.0 alpha21\n\n修复：hook无效问题（我关闭了代码压缩功能，安卓的压缩有点诡异）\n\n优化：hook逻辑\n\n2021-09-18",
     "download": "https://jq.qq.com/?_wv=1027&k=qVkARWOX"
   },
   "inherit": true
