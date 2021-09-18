@@ -12,9 +12,9 @@
     "download": ""
   },
   "alpha": {
-    "version": "涅槃 3.0.0 alpha22",
-    "verNum": 124,
-    "log": "涅槃3.0.0 alpha22\n\n新增：资产映射支持使用正则表达式，请以 【reg:】开头写正则，以前以【regex:】开头\n\n修复：默认分类错误的问题\n\n优化：微信数据获取",
+    "version": "涅槃 3.0.0 alpha25",
+    "verNum": 125,
+    "log": "涅槃3.0.0 alpha25\n\n修复：通知唤醒，导致支付宝异常\n\n修复：微信数据获取数据存在缺失的问题\n\n优化：数据测试的时候会加入账单\n\n2021-09-18",
     "download": "https://jq.qq.com/?_wv=1027&k=qVkARWOX"
   },
   "inherit": true
