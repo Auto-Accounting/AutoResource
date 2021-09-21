@@ -12,9 +12,9 @@
     "download": ""
   },
   "alpha": {
-    "version": "涅槃 3.0.0 alpha28",
-    "verNum": 128,
-    "log": "涅槃3.0.0 alpha28\n\n新增：内置无障碍记账规则\n\n修复：钱迹手续费为0无法记账的问题\n\n修复：换行符导致的JS解析错误\n\n修复：无障碍显示错误\n\n2021-09-20",
+    "version": "涅槃 3.0.0 alpha29",
+    "verNum": 129,
+    "log": "涅槃3.0.0 alpha29\n\n优化：倒计时时间允许设置为0\n\n修复：时间函数导致的自动分类问题\n\n修复：time错误\n\n2021-09-22",
     "download": "https://jq.qq.com/?_wv=1027&k=qVkARWOX"
   },
   "inherit": true
