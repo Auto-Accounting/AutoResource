@@ -1,10 +1,10 @@
 {
   "data": [
     {
-      "des": "招商银行-信用卡还款\n规则编写：TAT",
+      "des": "招商银行-银联扣款\n规则编写：TAT",
       "identify": "sms",
       "fromApp": "",
-      "name": "招商银行-信用卡还款",
+      "name": "招商银行-银联扣款",
       "tableList": {
         "shopRemark": "$6",
         "money": "$5",
