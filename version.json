@@ -6,15 +6,15 @@
     "download": ""
   },
   "beta": {
-    "version": "涅槃 3.0.0 beta2",
-    "verNum": 141,
-    "log": "涅槃 3.0.0beta2\n\n优化：数据同步增加日志反馈\n\n优化：取消唤醒支付宝\n\n优化：规则导入，避免重复规则\n\n\n\n修复：无障碍的一些奇怪问题\n\n修复：一处拼写错误\n\n修复：导致JS执行失败的问题\n\n\n\n其他：反馈请填写反馈表：https://docs.qq.com/sheet/DWFRxYXlQWW1rQUla?tdsourcetag=s_macqq_aiomsg&tab=BB08J2\n\nDate:2021-10-07",
+    "version": "涅槃 3.0.0 beta3",
+    "verNum": 142,
+    "log": "优化：禁止字体受系统缩放功能影响\n\n优化：WebDav配置刷新问题\n\n优化：规则缓存\n\n优化：无障碍配置\n\n优化：无障碍功能重构中，由于微信变动导致部分数据无法正常获取（目前重构了微信发红包、收红包、发出转账、二维码扫描\n\n修复：不选择分类导致的闪退问题\n\n修复：钱迹分类图标为文字图标显示黑白块的问题\n\n修复：资产映射修改时直接添加而非修改\n\n修复：拉起钱迹记账面板进行记账\n\n其他：无障碍需要更多的数据进行适配，请联系dream@dreamn.cn\n\nDate:2021-10-09",
     "download": "https://www.coolapk.com/apk/cn.dreamn.qianji_auto"
   },
   "alpha": {
     "version": "涅槃 3.0.0 alpha36",
     "verNum": 136,
-    "log": "涅槃3.0.0 alpha36\n\n新增：规则编辑支持自动保存\n\n新增：内置规则（APP与自动分类）\n\n优化：无障碍显示与识别效果优化\n\n优化：规则导入时提示清除\n\n修复：规则数量超过10个进行替换会出现异常\n\n修复：root机器上使用QQ打开规则失败（也可能无效，未测试）\n\n修复：微信出现识别金额错误\n\n修复：部分页面崩溃\n\n修复：通知选择部分无效的问题\n\n修复：短信Hook失败的问题（去掉短信hook了，请授予短信权限即可）\n\n修复：可能导致规则失效的bug\n\n修复：WebDav显示错误\n\nDate:2021-10-06",
+    "log": "新增：规则编辑支持自动保存\n\n新增：内置规则（APP与自动分类）\n\n优化：无障碍显示与识别效果优化\n\n优化：规则导入时提示清除\n\n修复：规则数量超过10个进行替换会出现异常\n\n修复：root机器上使用QQ打开规则失败（也可能无效，未测试）\n\n修复：微信出现识别金额错误\n\n修复：部分页面崩溃\n\n修复：通知选择部分无效的问题\n\n修复：短信Hook失败的问题（去掉短信hook了，请授予短信权限即可）\n\n修复：可能导致规则失效的bug\n\n修复：WebDav显示错误\n\nDate:2021-10-06",
     "download": "https://jq.qq.com/?_wv=1027&k=qVkARWOX"
   },
   "inherit": true
