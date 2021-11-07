@@ -6,9 +6,9 @@
     "download": ""
   },
   "beta": {
-    "version": "涅槃 3.0.0 beta11",
-    "verNum": 150,
-    "log": "3.0.0 beta11\n\n新增：通知记账修改为打开待记账列表进行记账\n\n修复：修改资产映射出现的崩溃问题\n\n修复：beta6规则导入兼容问题\n\n修复：创建规则选项无效\n\n修复：在app分组页面导出数据为空的问题\n\n优化：线程控制，防止出现内存溢出\n\n优化：规则编辑页面缓存\n\nDate:2021-11-7",
+    "version": "涅槃 3.0.0 beta12",
+    "verNum": 151,
+    "log": "3.0.0 beta12\n\n优化：自动记账弹窗文案优化\n\n修复：自动分类云规则为空的问题\n\n修复：上下文获取失败的问题\n\n修复：半自动变全自动的问题\n\n修复：规则编辑时，账户名称显示有误的问题\n\n修复：规则自动恢复时，账户名称显示错误问题\n\n修复：规则页面拖动排序失效\n\nDate:2021-11-7\n\n",
     "download": "https://qm.qq.com/cgi-bin/qm/qr?k=2tVfTL79BcpFNvoJpIZh4PiKyufU1ugH&jump_from=webapi"
   },
   "alpha": {
