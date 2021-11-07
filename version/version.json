@@ -6,10 +6,10 @@
     "download": ""
   },
   "beta": {
-    "version": "涅槃 3.0.0 beta9",
-    "verNum": 148,
-    "log": "3.0.0 beta9\n\n修复：阻断低版本数据恢复\n\n修复：资产映射崩溃的问题",
-    "download": "https://www.coolapk.com/apk/cn.dreamn.qianji_auto"
+    "version": "涅槃 3.0.0 beta11",
+    "verNum": 150,
+    "log": "3.0.0 beta11\n\n新增：通知记账修改为打开待记账列表进行记账\n\n修复：修改资产映射出现的崩溃问题\n\n修复：beta6规则导入兼容问题\n\n修复：创建规则选项无效\n\n修复：在app分组页面导出数据为空的问题\n\n优化：线程控制，防止出现内存溢出\n\n优化：规则编辑页面缓存\n\nDate:2021-11-7",
+    "download": "https://qm.qq.com/cgi-bin/qm/qr?k=2tVfTL79BcpFNvoJpIZh4PiKyufU1ugH&jump_from=webapi"
   },
   "alpha": {
     "version": "涅槃 3.0.0 alpha36",
