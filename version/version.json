@@ -6,9 +6,9 @@
     "download": ""
   },
   "beta": {
-    "version": "涅槃 3.0.0 beta12",
-    "verNum": 151,
-    "log": "3.0.0 beta12\n\n优化：自动记账弹窗文案优化\n\n修复：自动分类云规则为空的问题\n\n修复：上下文获取失败的问题\n\n修复：半自动变全自动的问题\n\n修复：规则编辑时，账户名称显示有误的问题\n\n修复：规则自动恢复时，账户名称显示错误问题\n\n修复：规则页面拖动排序失效\n\nDate:2021-11-7\n\n",
+    "version": "涅槃 3.0.0 beta13",
+    "verNum": 152,
+    "log": "3.0.0 beta13\n\n优化：自动记账弹窗文案优化\n\n修复：app编辑无法新增的问题",
     "download": "https://qm.qq.com/cgi-bin/qm/qr?k=2tVfTL79BcpFNvoJpIZh4PiKyufU1ugH&jump_from=webapi"
   },
   "alpha": {
