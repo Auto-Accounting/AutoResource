@@ -6,9 +6,9 @@
     "download": ""
   },
   "beta": {
-    "version": "涅槃 3.0.0 beta8",
-    "verNum": 147,
-    "log": "3.0.0 beta8\n\n修复：beta6规则导入数据转换错误导致的JS执行错误；\n\n修复：资产选择页面为空的问题\n\n修复：打开账单列表闪退的问题\n\nDate:2021-11-7",
+    "version": "涅槃 3.0.0 beta9",
+    "verNum": 148,
+    "log": "3.0.0 beta9\n\n修复：阻断低版本数据恢复\n\n修复：资产映射崩溃的问题",
     "download": "https://www.coolapk.com/apk/cn.dreamn.qianji_auto"
   },
   "alpha": {
