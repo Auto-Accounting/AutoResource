@@ -6,10 +6,10 @@
     "download": ""
   },
   "beta": {
-    "version": "涅槃 3.0.0 beta14",
-    "verNum": 153,
-    "log": "3.0.0 beta14\n\n优化：通知数据捕获\n\n修复：短信规则添加后无法显示的问题\n\n修复：自动记账弹窗文案错误\n\n修复：通知无法记账\n\n修复：debug模式下无法正常输出数据和读取调试信息的问题\n\n修复：部分情况下日期解析错误的问题",
-    "download": "https://qm.qq.com/cgi-bin/qm/qr?k=2tVfTL79BcpFNvoJpIZh4PiKyufU1ugH&jump_from=webapi"
+    "version": "涅槃 3.0.0 beta7",
+    "verNum": 146,
+    "log": "优化：删除无用资源\n\n修复：日志无法分享\n\n修复：分类过长导致无法显示确认按钮的问题\n\nDate:2021-10-11",
+    "download": "https://www.coolapk.com/apk/cn.dreamn.qianji_auto"
   },
   "alpha": {
     "version": "涅槃 3.0.0 alpha36",
