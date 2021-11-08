@@ -6,9 +6,9 @@
     "download": ""
   },
   "beta": {
-    "version": "涅槃 3.0.0 beta14",
-    "verNum": 153,
-    "log": "3.0.0 beta14\n\n优化：通知数据捕获\n\n修复：短信规则添加后无法显示的问题\n\n修复：自动记账弹窗文案错误\n\n修复：通知无法记账\n\n修复：debug模式下无法正常输出数据和读取调试信息的问题\n\n修复：部分情况下日期解析错误的问题",
+    "version": "涅槃 3.0.0 beta15",
+    "verNum": 154,
+    "log": "新增：记住分类功能支持记住与自动分类结果相冲突的分类\n\n优化：自动剔除过早版本的备份数据\n\n优化：可能存在的空指针问题\n\n修复：未设置缓存时间导致无云规则的问题\n\n修复：出现`'`导致的js执行出错\n\n修复：通知重复读取的问题\n\nDate:2021-11-8",
     "download": "https://qm.qq.com/cgi-bin/qm/qr?k=2tVfTL79BcpFNvoJpIZh4PiKyufU1ugH&jump_from=webapi"
   },
   "alpha": {
