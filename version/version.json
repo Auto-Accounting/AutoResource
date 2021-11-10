@@ -6,9 +6,9 @@
     "download": ""
   },
   "beta": {
-    "version": "涅槃 3.0.0 beta15",
-    "verNum": 154,
-    "log": "新增：记住分类功能支持记住与自动分类结果相冲突的分类\n\n优化：自动剔除过早版本的备份数据\n\n优化：可能存在的空指针问题\n\n修复：未设置缓存时间导致无云规则的问题\n\n修复：出现`'`导致的js执行出错\n\n修复：通知重复读取的问题\n\nDate:2021-11-8",
+    "version": "涅槃 3.0.0 beta16",
+    "verNum": 155,
+    "log": "优化：文案异常\n\n优化：logo底色调整一致\n\n修复：同步分类出现重复的情况\n\n修复：锁屏记账崩溃\n\n修复：部分情况下，数据为null自动映射的问题\n\n修复：自动生成分类功能导致的崩溃问题\n\n修复：自动分类在可视化编辑后出现的分类错误（修正此错误需要重新保存一遍自动分类规则）\n\nDate:2021-11-10",
     "download": "https://qm.qq.com/cgi-bin/qm/qr?k=2tVfTL79BcpFNvoJpIZh4PiKyufU1ugH&jump_from=webapi"
   },
   "alpha": {
