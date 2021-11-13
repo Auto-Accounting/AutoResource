@@ -6,9 +6,9 @@
     "download": ""
   },
   "beta": {
-    "version": "涅槃 3.0.0 beta16",
-    "verNum": 155,
-    "log": "新增：待记账列表，主页长按账单列表或者点击通知唤醒\n\n优化：文案异常\n\n优化：logo底色调整一致\n\n修复：同步分类出现重复的情况\n\n修复：锁屏记账崩溃\n\n修复：部分情况下，数据为null自动映射的问题\n\n修复：自动生成分类功能导致的崩溃问题\n\n修复：自动分类在可视化编辑后出现的分类错误（修正此错误需要重新保存一遍自动分类规则）\n\nDate:2021-11-10",
+    "version": "涅槃 3.0.0 beta17",
+    "verNum": 156,
+    "log": "优化：暂时性强制关闭缓存\n\n优化：钱迹目前交互模式中全自动与自动记账必须要有root权限，优化逻辑\n\n优化：转入转出文案异常\n\n修复：自动分类可视化编辑页面规则异常\n\n修复：一处循环导致的卡死\n\n修复：无法识别到账户名称出现app包名的问题\n\n已知问题：Xposed 没办法获取通过小米服务框架发出的通知\n\nDate:2021-11-13",
     "download": "https://qm.qq.com/cgi-bin/qm/qr?k=2tVfTL79BcpFNvoJpIZh4PiKyufU1ugH&jump_from=webapi"
   },
   "alpha": {
