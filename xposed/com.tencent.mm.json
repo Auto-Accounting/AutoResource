@@ -1,1 +1,84 @@
-{"wechat":{"8.0.6":{"red":{"money":"AZb","total":"AZc","remark":"ATE","shop":"AYW","status":"AYU","group":"rid"}},"8.0.7":{"red":{"money":"gbJ","total":"Ezg","remark":"EtJ","shop":"Eza","status":"EyY","group":"tVd"}},"8.0.9":{"red":{"money":"gdu","remark":"c","shop":"FbV","status":"FbT","group":"ubb","total":"Fcb"}},"8.0.10":{"red":{"money":"gdu","remark":"EWD","shop":"FbV","status":"FbT","group":"ubb","total":"Fcb"}},"8.0.11":{"red":{"money":"ggG","remark":"FYN","shop":"Gef","status":"Ged","group":"unu","total":"Gel"}},"8.0.14":{"red":{"money":"ger","remark":"Gyy","shop":"GBM","status":"GBK","group":"GBQ","total":"GBS"}},"8.0.15":{"red":{"money":"ger","remark":"Gwu","shop":"GBM","status":"GBK","group":"utM","total":"GBS"}}},"8.0.16":{"red":{"money":"ger","remark":"Gwu","shop":"GBM","status":"GBK","group":"utM","total":"GBS"}},"8.0.17":{"red":{"money":"GFo","remark":"GzP","shop":"GFj","status":"GFh","group":"uQB","total":"GFp"}}}
+{
+  "wechat": {
+    "8.0.6": {
+      "red": {
+        "money": "AZb",
+        "total": "AZc",
+        "remark": "ATE",
+        "shop": "AYW",
+        "status": "AYU",
+        "group": "rid"
+      }
+    },
+    "8.0.7": {
+      "red": {
+        "money": "gbJ",
+        "total": "Ezg",
+        "remark": "EtJ",
+        "shop": "Eza",
+        "status": "EyY",
+        "group": "tVd"
+      }
+    },
+    "8.0.9": {
+      "red": {
+        "money": "gdu",
+        "remark": "c",
+        "shop": "FbV",
+        "status": "FbT",
+        "group": "ubb",
+        "total": "Fcb"
+      }
+    },
+    "8.0.10": {
+      "red": {
+        "money": "gdu",
+        "remark": "EWD",
+        "shop": "FbV",
+        "status": "FbT",
+        "group": "ubb",
+        "total": "Fcb"
+      }
+    },
+    "8.0.11": {
+      "red": {
+        "money": "ggG",
+        "remark": "FYN",
+        "shop": "Gef",
+        "status": "Ged",
+        "group": "unu",
+        "total": "Gel"
+      }
+    },
+    "8.0.14": {
+      "red": {
+        "money": "ger",
+        "remark": "Gyy",
+        "shop": "GBM",
+        "status": "GBK",
+        "group": "GBQ",
+        "total": "GBS"
+      }
+    },
+    "8.0.15": {
+      "red": {
+        "money": "ger",
+        "remark": "Gwu",
+        "shop": "GBM",
+        "status": "GBK",
+        "group": "utM",
+        "total": "GBS"
+      }
+    },
+    "8.0.16": {
+      "red": {
+        "money": "GFo",
+        "remark": "GzP",
+        "shop": "GFj",
+        "status": "GFh",
+        "group": "uQB",
+        "total": "GFp"
+      }
+    }
+  }
+}
