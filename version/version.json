@@ -6,8 +6,8 @@
     "download": ""
   },
   "beta": {
-    "version": "涅槃 3.0.0 beta20",
-    "verNum": 159,
+    "version": "涅槃 3.0.0 beta21",
+    "verNum": 160,
     "log": "新增：通知监听，与之前xp不一样的通知监听权限，为虚拟框架用户准备，LSP/EDXP用户不需要\n\n新增：进一步提高调试模式获取的数据量，以便于支付成功无法唤起自动记账时分析（调试模式很耗电，日常使用请关闭）\n\n优化：无障碍需要写规则\n\n优化：尝试修复xp模式通知获取失败的问题\n\n修复：钱迹同步的时候，非会员用户会多同步一个默认账本的问题\n\nDate:2021-11-21",
     "download": "https://qm.qq.com/cgi-bin/qm/qr?k=2tVfTL79BcpFNvoJpIZh4PiKyufU1ugH&jump_from=webapi"
   },
