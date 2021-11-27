@@ -6,9 +6,9 @@
     "download": ""
   },
   "beta": {
-    "version": "涅槃 3.0.0 beta25",
-    "verNum": 164,
-    "log": "优化：UI细节优化\n\n修复：一处拼写错误\n\n修复：规则计算问题导致的识别错误\n\n修复：账单列表异常的问题\n\n修复：可能出现闪退的问题\n\nDate:2021-11-27",
+    "version": "涅槃 3.0.0 beta26",
+    "verNum": 165,
+    "log": "修复：规则无法测试和使用的问题\n\n修复：是否分类选择崩溃问题\n\n优化：规则测试不受其他规则影响\n\nDate:2021-11-27",
     "download": "https://qm.qq.com/cgi-bin/qm/qr?k=2tVfTL79BcpFNvoJpIZh4PiKyufU1ugH&jump_from=webapi"
   },
   "alpha": {
