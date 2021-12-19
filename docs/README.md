@@ -1,10 +1,11 @@
-# 钱迹 之 自动记账 插件 :id=GoToHelpDoc
+# 自动记账  :id=GoToHelpDoc
 
-![](https://img.shields.io/github/issues/dreamncn/Qianji_auto)
-![](https://img.shields.io/badge/PoweredBy-Dreamn-f39f37)
-![](https://img.shields.io/github/license/dreamncn/VPay)
-![](https://img.shields.io/github/stars/dreamncn/Qianji_auto.svg?label=Stars&style=social)
-
+![](https://img.shields.io/static/v1?label=framework&message=Xposed&color=success&style=for-the-badge)
+![](https://img.shields.io/static/v1?label=licenes&message=GPL3.0&color=important&style=for-the-badge)
+![](https://img.shields.io/github/issues/dreamncn/Qianji_auto?style=for-the-badge)
+![](https://img.shields.io/github/stars/dreamncn/Qianji_auto.svg?style=for-the-badge)
+![](https://img.shields.io/badge/dynamic/json?color=blueviolet&label=Coolapk&suffix=%20fans&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dcoolapk%26queryKey%3D1503334&link=http%3A%2F%2Fwww.coolapk.com%2Fu%2F1503334&style=for-the-badge)
+![](https://img.shields.io/static/v1?label=download&message=40K&color=9cf&style=for-the-badge)
 
 ## 项目简介
 
@@ -26,21 +27,22 @@
 **自动记账：**一款真正人性化的插件。<br/>
 
 !>*自动记账* 是一款辅助记账软件，基于[钱迹记账](https://www.coolapk.com/apk/com.mutangtech.qianji)App记账接口开发。因此本插件需搭配[钱迹](https://www.coolapk.com/apk/com.mutangtech.qianji)App使用。
+!> 在自动记账3.0版本中加入了对其他记账软件的支持，详情请参考[使用其他记账软件]()
 
 ----
 
-自动记账提供的 **Xposed** 和 **无障碍** 两种模式选择，由于实现的原理差异，在功能上具有一定的差异，在条件允许的情况下，我们推荐使用**Xposed模式**。
+自动记账提供 **Xposed** 和 **无障碍** 两种模式。由于实现的原理差异，在功能上具有一定的差异，在条件允许的情况下，我们推荐使用**Xposed模式**。
 
 具体的对比如下:
 
 | 优点及缺点                                               | 无障碍 | Xposed |
 | --------------------------------------------------------| ------ | ------ |
-| **直接报销，无需进入钱迹**                               | <font color="#ff7733">✘</font>| <font color="#ff7733">✘</font>|
+| **直接报销，无需进入钱迹【开发中】**                               | <font color="#ff7733">✘</font>| <font color="#ff7733">✘</font>|
 | **直接从钱迹拉取资产、分类数据**                         | <font color="#ff7733">✘</font>| <font color="#44cc66">✔</font>|
 | **微信、支付宝等账单识别**                             | <font color="#44cc66">✔</font>| <font color="#44cc66">✔</font>|
+| **通知以及短信监听识别**                             | <font color="#44cc66">✔</font>| <font color="#44cc66">✔</font>|
 | **后台扣费账单识别**                      | <font color="#ff7733">✘</font>| <font color="#44cc66">✔</font>|
 | **账单信息读取**                  | **<font color="#ff7733">不够精准</font>**| **<font color="#44cc66">精准</font>**|
-| **<font color="#ff7733">有时会在付款之前识别记账</font>**| <font color="#ff7733">✔</font>| <font color="#44cc66">✘</font>|
 | **<font color="#ff7733">需要解锁BootLoader刷机</font>** | <font color="#44cc66">✘</font>| <font color="#ff7733">✔</font>|
 | **<font color="#ff7733">需要常驻后台</font>**           | <font color="#ff7733">✔</font>| <font color="#44cc66">✘</font>|
 
@@ -61,10 +63,10 @@
 - 从您fork的项目向我的项目发起Pull Request
 - 详细操作[点我](Contribution.md)
 
-## 部署步骤
+## 编译步骤
 
 - 下载源代码到本地
-- 使用AS打开
+- 使用Android Studo打开
 - Build
 
 ## 下载

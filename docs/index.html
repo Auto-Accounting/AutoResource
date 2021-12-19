@@ -10,27 +10,26 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" title="vue" />
     <title>自动记账</title>
     <style>
-        nav.app-nav li ul {
-            min-width: 100px;
-        }
+        ::-webkit-scrollbar {
+width:0px;
+
+}
     </style>
 </head>
 
 <body>
-    <nav class="app-nav">
-        <ul>
-            <li>主题
-                <ul>
-                    <li><a data-theme="vue" title="vue">vue</a></li>
-                    <li><a data-theme="buble" title="buble">buble</a></li>
-                    <li><a data-theme="dark" title="dark">dark</a></li>
-                    <li><a data-theme="pure" title="pure">pure</a></li>
-                    <li><a data-theme="dolphin" title="dolphin">dolphin</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+ 
     <div id="app"></div>
+
+    <script src="https://unpkg.com/docsify/lib/docsify.min.js"></script>
+    <script src="https://unpkg.com/docsify/lib/plugins/search.js"></script>
+    <script src="https://unpkg.com/docsify-copy-code"></script>
+
+    <script src="https://unpkg.com/prismjs/components/prism-js.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+
     <script>
         window.$docsify = {
             name: '自动记账',
@@ -47,6 +46,7 @@
                         return '<span style="font-size: 16px;color:gray">最后更新：{docsify-updated}</span>\n\n\n----\n' + html
                     })
                 },
+               
             ],
             search: {
                 maxAge: 86400000, // 过期时间，单位毫秒，默认一天
@@ -73,29 +73,6 @@
             }
         }
     </script>
-    <script src="https://unpkg.com/docsify/lib/docsify.min.js"></script>
-    <script src="https://unpkg.com/docsify/lib/plugins/search.js"></script>
-    <script src="https://unpkg.com/docsify-copy-code"></script>
-
-    <script src="https://unpkg.com/prismjs/components/prism-bash.js"></script>
-    <script src="https://unpkg.com/prismjs/components/prism-php.js"></script>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
-    <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-    <script>
-        const gitalk = new Gitalk({
-            clientID: 'ccde880a64714cebc411',
-            clientSecret: '91c2f393932a324ee6b879cda1e40e6c56155965',
-            repo: 'Qianji_auto',
-            owner: 'dreamncn',
-            admin: ['dreamncn'],
-            id: md5(location.href),
-            distractionFreeMode: false
-        })
-    </script>
-
 </body>
 
 </html>

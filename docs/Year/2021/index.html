@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0, maximum-scale=1.0">
+<meta name="format-detection" content="telephone=no,email=no"/>
+<link rel="stylesheet" href="./static/css/h5-fullscreen.css">
+<link rel="stylesheet" href="./static/css/animate.css">
+<link rel="stylesheet" href="./static/css/bill.css">
+<title>2021年度账单</title>
+</head>
+<body>
+<div class="loading-overlay" id="videoDiv">
+    <video id="video" autoplay src="/static/images/go.mp4" width="100%" height="100%"></video>
+</div>
+<div class="fullscreen-page-wrap">
+    <div class="item item2">
+        <img src="./static/images/logo.png" alt="" class="animated img_logo" data-ani-name="bounceInDown" data-ani-duration="1s" data-ani-delay="0s">
+        <div  class="animated title" data-ani-name="bounceInDown" data-ani-duration="1s" data-ani-delay="0.5s">自动记账2021年度账单</div>
+        <div class="animated" data-ani-name="lightSpeedIn" data-ani-duration="1s" data-ani-delay="0.5s">
+            <h1>无论经历怎样的酷寒</h1>
+            <h1>春天总会如约而至</h1>
+        </div>
+        <div class="btn animated" data-ani-name="flipInY" data-ani-duration="1s" data-ani-delay="1.5s">上滑立即开启</div>
+    </div>
+    <div class="item item_start" >
+        <div class="bill-start">
+            <h1 class="animated" data-ani-name="bounceInDown" data-ani-duration="1s" data-ani-delay="0s">2021,依旧是充满苦难的一年。</h1>
+            <ul class="animated" data-ani-name="flipInY" data-ani-duration="1s" data-ani-delay="0.8s">
+                <li>1. 新冠疫情反反复复，防疫任重道远；</li>
+                <li>2. 新疆棉被H&amp;M抵制；</li>
+                <li>3. 袁隆平等27位院士相继离世；</li>
+                <li>4. 吴孟达等多位老戏骨离世；</li>
+                <li>5. 郑州特大暴雨，遇难人数近300；</li>
+                <li>6. 中国公民孟晚舟乘坐中国政府包机返回祖国；</li>
+                <li>......</li>
+            </ul>
+            <h2 class="animated" data-ani-name="zoomIn" data-ani-duration="1.2s" data-ani-delay="2s">亲爱的<span class="userName">Ankio</span>，无论生活多么困难，都要有面对的勇气。且待来年春风起，拂尽客岁万古愁。</h2>
+            <h2 class="animated" data-ani-name="flipInY" data-ani-duration="1s" data-ani-delay="2.5s">Ankio 致自动记账全体用户</h2>
+        </div>
+    </div>
+    <div class="item item3">
+        <div class="year-bill">
+            <h3 class="year animated" data-ani-name="zoomIn" data-ani-duration="1s" data-ani-delay="0s">2021 年</h3>
+            <h1 class="animated" data-ani-name="zoomInRight" data-ani-duration="1.5s" data-ani-delay="0.5s">我的年度总消费</h1>
+            <h1 class="animated" data-ani-name="zoomInLeft" data-ani-duration="1.5s" data-ani-delay="1s">
+                <span class="amount" id="yearAll">185,457,451.05</span>
+                <span style="font-size: 0.5rem;
+    color: rgb(95, 95, 95);">元</span></h1>
+            <h3 class="invests animated" data-ani-name="zoomInRight" data-ani-duration="1.5s" data-ani-delay="1s">
+                消费<span id="yearTotal">756</span>笔</h3>
+            
+            <h3 class="saying animated" data-ani-name="zoomInUp" data-ani-duration="3s" data-ani-delay="0.5s">懂得爱自己的你 </br>一定也有人更爱你</h3>
+        </div>
+        <div class="say animated" data-ani-name="flipInY" data-ani-duration="1s" data-ani-delay="3s"><b>“</b>
+            数据由<span class="userName">Ankio</span>授权提供 <b>”</b></div>
+    </div>
+
+    <div class="item item4">
+        <div class="boxround animated year-early" data-ani-name="fadeInLeft" data-ani-duration="1.0s" data-ani-delay="0.1s">
+            <div class="inner">还记得<span class="onlinedata" id='earlyDate'>2021-06-04</span></br>
+                那天<span class="onlinedata" id="earlyTime">05:31:00</span>我早早地起床</br>消费了<span class="onlinedata" id="earlyMoney">25.06</span>元（<span class="onlinedata" id="earlyRemark">万源饺子城 - 三餐</span>）</div>
+            <div class="inner">深夜<span class="onlinedata" id="lateTime">05:31:00</span><br>
+                我又消费了<span class="onlinedata" id="lateMoney">66,210.3</span>元（<span class="onlinedata" id="lateRemark">万源饺子城 - 三餐</span>）<br>
+                那天是<span class="onlinedata" id="lateDate">2021-06-04</span></div>
+        </div>
+        <div class="say animated" data-ani-name="flipInY" data-ani-duration="1s" data-ani-delay="0s" ><b>“</b>无论多忙，也要注意休息! <b>”</b></div>
+    </div>
+
+    <div class="item item4 item9" >
+            <div class="boxround animated year-early" style="right: 0;" data-ani-name="fadeInRight" data-ani-duration="1.0s" data-ani-delay="0.1s">
+                <div class="inner">这一年<br>
+                    我最喜欢的支付方式是：<span class="onlinedata" id="maxPay">蚂蚁花呗</span>，全年总计消费：<span class="onlinedata" id="maxNumber">8545</span>次，消费总额为<span class="onlinedata" id="maxPayMoney">1200</span>元。<br><br>
+                    <div id="payData">
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="say animated" data-ani-name="flipInY" data-ani-duration="1s" data-ani-delay="0s"><b>“</b>
+                <span id="payTip">大手一挥，来，刷卡！</span><b>”</b></div>
+    </div>
+
+    <div class="item item5">
+
+        <ul>
+            <li class="animated" data-ani-name="fadeInLeft" data-ani-duration="1s" data-ani-delay="0s">
+                2021年，我在<span class="onlinedata" id="maxType">医疗</span>上花的最多。<br>
+                累计消费<span id="maxMoney" class="onlinedata">900,000.23</span>元。
+                <div id="payMaxTip">无论是一个人还是两个人，都要好好爱自己。</div>
+            </li>
+            <li class="animated" data-ani-name="fadeInRight" data-ani-duration="1s" data-ani-delay="1s">
+                2021年，我在<span class="onlinedata" id="maxInType">工资</span>上收入最高。<br>
+                累计收入<span id="maxInMoney" class="onlinedata">900,000.23</span>元。
+                <div id="inMaxTip">高档如您，不掩饰豪气，也追求多面 。</div>
+            </li>
+        </ul>
+
+        <div id="chart_main" class="animated"  data-ani-name="zoomInUp" data-ani-duration="1s" data-ani-delay="2s"></div>
+
+        <div class="say animated" data-ani-name="flipInY" data-ani-duration="1s" data-ani-delay="3s"><b>“</b>
+            <span id="payMostTip">每一笔消费都值得记录。</span><b>”</b></div>
+    </div>
+    <div class="item item5 item8">
+
+        <ul>
+            <li class="animated" id="ul_out" data-ani-name="fadeInLeft" data-ani-duration="1s" data-ani-delay="0s">
+                2021年，我累计借出<span class="onlinedata" id="outTotal">9999</span>元。<br>
+                其中<span id="outPeople" class="onlinedata">王二</span>借出最多，高达<span class="onlinedata" id="outPeopleMoney">9999</span>元。
+                <div id="outTip">定是情比金坚，才敢如此慷慨解囊。</div>
+            </li>
+            <li class="animated"  id="ul_in" data-ani-name="fadeInRight" data-ani-duration="1s" data-ani-delay="1s">
+                2021年，我累计入出<span class="onlinedata" id="inTotal">9999</span>元。<br>
+                其中向<span id="inPeople" class="onlinedata">王二</span>借入最多，高达<span class="onlinedata" id="inPeopleMoney">9999</span>元。
+                <div id="inTip"> 没有比人更高的山，没有比脚更长的路，没有过不去的坎。新的一年，加油！</div>
+            </li>
+        </ul>
+
+
+        <div class="say animated" data-ani-name="flipInY" data-ani-duration="1s" data-ani-delay="3s"><b>“</b>
+            <span >每一个人都有困难的时候。</span><b>”</b></div>
+    </div>
+
+
+
+    <div class="item item4">
+        <div class="boxround animated" data-ani-name="fadeInLeft" data-ani-duration="1.0s" data-ani-delay="0.1s"  style="border-radius: 10px;top:1rem;">
+            <div class="inner">我的支出偏好</div>
+            <div id="out_pay" >
+
+            </div>
+
+            <div class="inner" style="font-size: 0.1rem; color: rgb(134, 134, 134);letter-spacing:0.03rem;margin-bottom: 0.1rem">每一笔都是必要支出</div>
+        </div>
+        <div class="boxround animated"  data-ani-name="fadeInRight" data-ani-duration="1.0s" data-ani-delay="0.1s"  style="    top: 5rem;border-radius: 10px;
+    right: 0;">
+            <div class="inner">我的收入偏好</div>
+            <div id="in_pay" > </div>
+
+            <div class="inner" style="font-size: 0.1rem; color: rgb(134, 134, 134);letter-spacing:0.03rem;margin-bottom: 0.1rem">每一项都是收入</div>
+        </div>
+        <div class="say animated" data-ani-name="flipInY" data-ani-duration="1s" data-ani-delay="0s" ><b>“</b>
+            积小成多! <b>”</b></div>
+    </div>
+
+    <div class="item item6">
+        <div class="leading animated" data-ani-name="bounceInDown" data-ani-duration="1s" data-ani-delay="0s">
+
+            <h1 class=" animated" data-ani-name="bounceIn" data-ani-duration="1s" data-ani-delay="0.5s">2021年终报告</h1>
+            <h2 class=" animated" data-ani-name="lightSpeedIn" data-ani-duration="1s" data-ani-delay="0.5s">收入：￥<span class="onlinedata" id="inMoney">999222</span></h2>
+            <h2 class=" animated" data-ani-name="lightSpeedIn" data-ani-duration="1s" data-ani-delay="0.5s">支出：￥<span class="onlinedata" id="outMoney">999222</span></h2>
+            <h2 class=" animated" data-ani-name="lightSpeedIn" data-ani-duration="1s" data-ani-delay="0.5s">结余：￥<span class="onlinedata" id="yearMoney">999222</span></h2>
+
+
+            <h3 class=" animated" data-ani-name="lightSpeedIn" data-ani-duration="1s" data-ani-delay="0.5s" style="font-size:0.16rem; margin-top: 0.2rem;color: rgb(134,134,134)">详细数据请前往钱迹查看</h3>
+        </div>
+        <div id="piechart" style="width: 88%;height:40%; margin:0.3rem auto 0 auto"></div>
+        <div class="say animated" data-ani-name="flipInY" data-ani-duration="1s" data-ani-delay="0s"><b>“</b>
+            继续滑动，预测我的2021<b>”</b></div>
+    </div>
+    <div class="item item7">
+        <div class="leading animated" data-ani-name="fadeIn" data-ani-duration="3s" data-ani-delay="0s">
+            <div class="key_title">我的年度关键词
+                
+            </div>
+            <span style="font-size:0.2rem;color:rgb(134,134,134)">每一个词都是未来的美好</span>
+
+            <!--<img src="./static/images/final.jpg" alt="">-->
+            <div style="font-size:0.8rem;margin-bottom: 0.2rem" id="key_name">旺</div>
+            <div style="font-size:0.27rem;color: rgb(134,134,134)" id="key_text">旺旺</div>
+        </div>
+
+        <div class="bottom_share animated" data-ani-name="lightSpeedIn" data-ani-duration="1s" data-ani-delay="1s">
+            <div class="share" id="share">分享此账单</div>
+        </div>
+
+
+    </div>
+</div>
+<div class="overlay"></div>
+<script src="./static/js/jquery-3.1.1.js"></script>
+
+<script type="text/javascript" src="./static/js/h5-fullscreen.js" defer async="true"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/echarts/4.2.0-rc.2/echarts-en.common.min.js" defer async="true"></script>
+<script type="text/javascript" src="./static/js/bill.js" defer async="true"></script>
+<script src="./static/js/utils.js"></script>
+
+
+
+</body>
+</html>

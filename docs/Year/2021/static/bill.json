@@ -1,0 +1,70 @@
+{
+  "name": "ankio",
+  "bill": {
+    "page1": {
+      "name": "年度总消费",
+      "yearAll": 3190000.20,
+      "yearTotal": 3190000
+    },
+    "page2": {
+      "name": "最早的和最晚的消费，取22点到3点，3点到7点",
+      "earlyDate": "2021-06-04",
+      "earlyTime": "05:31:00",
+      "earlyMoney": "66.0",
+      "earlyRemark": "万源饺子城 - 三餐",
+      "lateDate": "2021-06-04",
+      "lateTime": "05:31:00",
+      "lateMoney": "66.0",
+      "lateRemark": "万源饺子城 - 三餐"
+    },
+    "page3":{
+      "name": "消费偏好",
+      "maxPay": "花呗",
+      "maxPayMoney": "12.00",
+      "maxNumber": 999,
+      "data": {
+        "建设银行": 99,
+        "交通银行": 99,
+        "现金":999
+      }
+    },
+    "page4":{
+      "name": "消费和收入最高的分类",
+      "maxType": "单车",
+      "maxMoney": 999,
+      "maxInType": "医疗",
+      "maxInMoney": 999,
+      "in":[13,  6, 7,1, 23, 10, 11, 23, 11, 23, 34, 5],
+      "out":[11, 23, 9, 10, 11, 23, 9, 10, 11, 53, 44]
+    },
+    "page5":{
+      "name": "借钱信息",
+      "outTotal": 99.41,
+      "outPeople": "王二",
+      "outPeopleMoney": 66,
+      "inTotal": 99.41,
+      "inPeople": "王二",
+      "inPeopleMoney": 66
+    },
+    "page6":{
+      "name": "收支分类",
+      "maxPay": {
+        "炒股":5,
+        "炒股2":5,
+        "炒股3":5
+      },
+      "maxIn":  {
+        "炒股":5,
+        "炒股2":5,
+        "炒股3":5
+      }
+    },
+    "page7":{
+      "name": "年底信息",
+      "yearMoney": 9000,
+      "inMoney": 9000,
+      "outMoney": 9000
+    }
+
+  }
+}
