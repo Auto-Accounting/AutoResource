@@ -1,6 +1,6 @@
 # 自动记账  :id=GoToHelpDoc
 
-![](https://img.shields.io/static/v1?label=framework&message=Xposed&color=success&style=for-the-badge)
+![](https://img.shields.io/static/v1?label=framework&message=Xposed/无障碍&color=success&style=for-the-badge)
 ![](https://img.shields.io/static/v1?label=licenes&message=GPL3.0&color=important&style=for-the-badge)
 ![](https://img.shields.io/github/issues/dreamncn/Qianji_auto?style=for-the-badge)
 ![](https://img.shields.io/github/stars/dreamncn/Qianji_auto.svg?style=for-the-badge)
@@ -31,13 +31,14 @@
 
 ----
 
-自动记账提供 **Xposed** 和 **无障碍** 两种模式。由于实现的原理差异，在功能上具有一定的差异，在条件允许的情况下，我们推荐使用**Xposed模式**。
+自动记账提供 **Xposed** 和 **无障碍** 两种模式。由于实现的原理差异，在功能上具有一定的差异，在条件允许的情况下，我们推荐使用**Xposed模式**，使用**虚拟框架**的用户在体验上略差于**Xposed**。
+
 
 具体的对比如下:
 
 | 优点及缺点                                               | 无障碍 | Xposed |
 | --------------------------------------------------------| ------ | ------ |
-| **直接报销，无需进入钱迹【开发中】**                               | <font color="#ff7733">✘</font>| <font color="#ff7733">✘</font>|
+| **直接报销，无需进入钱迹**                               | <font color="#ff7733">✘</font>| <font color="#ff7733">✘</font>|
 | **直接从钱迹拉取资产、分类数据**                         | <font color="#ff7733">✘</font>| <font color="#44cc66">✔</font>|
 | **微信、支付宝等账单识别**                             | <font color="#44cc66">✔</font>| <font color="#44cc66">✔</font>|
 | **通知以及短信监听识别**                             | <font color="#44cc66">✔</font>| <font color="#44cc66">✔</font>|
