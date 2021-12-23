@@ -77,7 +77,9 @@ body { color: #000; font: 50px "Microsoft YaHei", "微软雅黑", "Helvetica Neu
 
 .item4 img { width: 3.500rem; margin-top: 1rem; }
 
-
+.onlinedata{
+  word-break: break-all;
+}
 
 .item4 .earnings, .item4 .invests { display: block; color: #fff; font-size: 0.267rem; background-color: #fd808d; width: 1.267rem;border-radius: 0.700rem; padding: 0.267rem 0; position: absolute; }
 

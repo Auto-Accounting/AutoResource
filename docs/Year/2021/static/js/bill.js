@@ -1,9 +1,8 @@
 'use strict';
 
 function toThousands(num) {
-
+    num = num||0;
     return (num.toString().indexOf('.') !== -1) ? num.toLocaleString() : num.toString().replace(/(\d)(?=(?:\d{3})+$)/g, '$1,');
-
 }
 
 
@@ -154,6 +153,7 @@ $(document).ready(function () {
     try{
         const analyzeData = decodeURIComponent(getQueryString("data"));
         var json = JSON.parse(analyzeData);
+        console.log(json)
         $("#yearAll").text(toThousands(json.bill.page1.yearAll));
         $("#yearTotal").text(toThousands(json.bill.page1.yearTotal));
         $(".userName").text(json.name);
@@ -177,8 +177,16 @@ $(document).ready(function () {
            }
        }
        var d = json.bill.page3.data;
-        for(let key  in json.bill.page3.data){
-            $("#payData").html("<div>"+key+" <span class=\"onlinedata\">"+d[key]+"</span>次;</div>"+$("#payData").html());
+       // jsonObject5.put("num",time);
+        //                                         jsonObject5.put("money",money);
+        //                                         jsonObject5.put("payTool",payTool);
+        d.sort(function (a,b){
+            return a.num-b.num;
+        });
+
+        for(var j=0;j<d.length;j++){
+            if(j>10)break
+            $("#payData").html("<div>"+d[j].payTool+" <span class=\"onlinedata\">"+d[j].num+"</span>次，<span class=\"onlinedata\">"+d[j].money+"</span>元;</div>"+$("#payData").html());
         }
 
         $("#maxType").text(json.bill.page4.maxType);
@@ -203,7 +211,7 @@ $(document).ready(function () {
         }
         $("#ul_in").hide();
         $("#ul_out").hide();
-        if(json.bill.page5.ouTotal!==0){
+        if(json.bill.page5.outTotal!==0){
             $("#ul_out").show();
             $("#outPeople").text(json.bill.page5.outPeople);
             $("#outPeopleMoney").text(toThousands(json.bill.page5.outPeopleMoney));
@@ -216,20 +224,31 @@ $(document).ready(function () {
             $("#inTotal").text(json.bill.page5.inTotal);
         }
 
-        if(json.bill.page5.ouTotal===0&&json.bill.page5.inTotal===0){
+        if(json.bill.page5.outTotal===0&&json.bill.page5.inTotal===0){
             $(".item5 ul").removeChild();
             $(".item5 ul").html("<li class=\"animated\" data-ani-name=\"fadeInLeft\" data-ani-duration=\"1s\" data-ani-delay=\"0s\">2021年，我未曾借出或者借入。<br><div id=\"outTip\">每一分钱都有存在的意义。</div>  </li>");
         }
 
 
         var o = json.bill.page6.maxPay;
-        for(var m in o){
-            $("#out_pay").html("<div class=\"inner\">"+m+"<span class=\"onlinedata\" >"+toThousands(o[m])+"</span>元</div>"+$("#out_pay").html())
+
+        o.sort(function (a,b){
+            return a.money-b.money;
+        });
+
+        for(var i =0;i<o.length;i++){
+            if(i>5)break
+            $("#out_pay").html("<div class=\"inner\">"+o[i].name+"<span class=\"onlinedata\" >"+toThousands(o[i].money)+"</span>元</div>"+$("#out_pay").html())
         }
 
          o = json.bill.page6.maxIn;
-        for( m in o){
-            $("#in_pay").html("<div class=\"inner\">"+m+"<span class=\"onlinedata\" > "+toThousands(o[m])+"</span>元</div>"+$("#out_pay").html())
+
+        o.sort(function (a,b){
+            return a.money-b.money;
+        });
+        for( i =0;i<o.length;i++){
+            if(i>5)break
+            $("#in_pay").html("<div class=\"inner\">"+o[i].name+"<span class=\"onlinedata\" > "+toThousands(o[i].money)+"</span>元</div>"+$("#in_pay").html())
         }
 
         $("#yearMoney").text(toThousands(json.bill.page7.yearMoney));
