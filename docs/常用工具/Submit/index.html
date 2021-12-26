@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>自动记账规则提交</title>
+    <link rel="stylesheet" href="https://unpkg.com/layui@2.6.8/dist/css/layui.css">
+    <style>
+        .ok-body {
+            padding: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+<div class="ok-body">
+<blockquote class="layui-elem-quote layui-text">
+    这里是自动记账规则提交平台，需要先拥有Github账号，没有<a href="https://github.com/">请注册</a>
+</blockquote>
+<fieldset class="layui-elem-field layui-field-title">
+    <legend>规则提交</legend>
+</fieldset>
+<form class="layui-form layui-form-pane" action="">
+    <div class="layui-form-item">
+        <label class="layui-form-label">规则名称</label>
+        <div class="layui-input-block">
+            <input type="text" name="title" lay-verify="required|title" autocomplete="off" placeholder="请输入规则名称" class="layui-input">
+        </div>
+    </div>
+    <div class="tip">
+        <blockquote class="layui-elem-quote layui-text">
+            命名规则：
+            <br>1.名称需要简洁，容易让人辩识。
+            <br>2.自动分类直接填写名称
+            <br>3.app数据、通知类需要加前缀，前缀名为App名称。例如：【微信】发红包、【微信】公众号_招行信用卡_支出
+            <br>4.短信需要加前缀，前缀名为短信发送方名称。例如：【中国银行】储蓄卡_支出
+            <br>5.标题不符合要求的将被直接关闭。
+        </blockquote>
+    </div>
+    <div class="layui-form-item layui-form-text">
+        <label class="layui-form-label">更新日志</label>
+        <div class="layui-input-block">
+            <textarea placeholder="请输入更新日志，没有请留空。" name="log" class="layui-textarea"></textarea>
+        </div>
+    </div>
+    <div class="layui-form-item layui-form-text">
+        <label class="layui-form-label">数据</label>
+        <div class="layui-input-block">
+            <textarea placeholder="请粘贴复制的数据。" name="data" class="layui-textarea"></textarea>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <button class="layui-btn" lay-submit="" lay-filter="demo2">提交</button>
+    </div>
+</form>
+</div>
+
+<script src="https://unpkg.com/layui@2.6.8/dist/layui.js" ></script>
+<script>
+    layui.use(['layer', 'form'], function(){
+        var layer = layui.layer
+            ,form = layui.form;
+        var url = window.location.href;
+        var index = url.lastIndexOf("\/");
+        var id = url.substring(index + 1,url.length);
+
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+        if(getQueryString("name")!==null){
+            layui.$("input[name=title]").val(getQueryString("name"));
+        }
+        form.verify({
+            title: function(value, item){ //value：表单的值、item：表单的DOM对象
+                if(!new RegExp("^[【】a-zA-Z0-9_\u4e00-\u9fa5\\s·]+$").test(value)){
+                    return '标题不能有特殊字符';
+                }
+                if(/(^_)|(__)|(_+$)/.test(value)){
+                    return '标题首尾不能出现下划线\'_\'';
+                }
+                if(/^\d+\d+\d$/.test(value)){
+                    return '标题不能全为数字';
+                }
+
+            }
+        });
+        //监听提交
+        form.on('submit(demo2)', function(data){
+            const field = data.field;
+            layui.$.ajax({url:"./reg.md",success:function(result){
+                    for(const p in field){//遍历json对象的每个key/value对,p为key
+                        if(p==="data")continue;
+                        result=result.replace("<!--"+p+"-->",field[p])
+                    }
+                    if(field.data.length>1500){
+                        layer.alert('数据部分过长，无法直接提交，点击确认前往Github填写！', function(index){
+                            result=result.replace("<!--data-->","<!--请删除本行并粘贴数据-->")
+                            //window.open('https://github.com/dreamncn/AutoResource/issues/new?template=-----rule-submission.md&title=' + encodeURIComponent(data.field.title));
+                            window.open('https://github.com/dreamncn/AutoResource/issues/new?title=' + encodeURIComponent(data.field.title) + '&body=' + encodeURIComponent(result));
+
+                            layer.close(index);
+                        });
+                    }else{
+                        result=result.replace("<!--data-->",field.data)
+                        //window.open('https://github.com/dreamncn/AutoResource/issues/new?template=-----rule-submission.md&title=' + encodeURIComponent(data.field.title));
+                        window.open('https://github.com/dreamncn/AutoResource/issues/new?title=' + encodeURIComponent(data.field.title) + '&body=' + encodeURIComponent(result));
+
+                    }
+                   }});
+
+            return false;
+        });
+    });
+</script>
+</body>
+</html>
