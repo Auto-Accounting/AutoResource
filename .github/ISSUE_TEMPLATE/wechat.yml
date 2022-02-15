@@ -1,6 +1,6 @@
 name: 🔮 微信适配
 description: 提交微信适配规则
-labels:["wechat"]
+labels: ["wechat"]
 
 body:
   - type: markdown
