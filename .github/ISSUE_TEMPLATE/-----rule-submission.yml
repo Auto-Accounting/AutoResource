@@ -22,7 +22,7 @@ body:
     id: regulars
     attributes:
       label: Data/数据
-      value: ```json
+      value : ```json
       <!--请删除本行并粘贴数据-->
       ```
 
