@@ -18,7 +18,7 @@ body:
       label: Update Log/更新日志
       placeholder: |
         ...
-  - type: 规则数据
+  - type: textarea
     id: regulars
     attributes:
       label: Data/数据
