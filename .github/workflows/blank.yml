@@ -30,8 +30,6 @@ jobs: # 工作流
       - name: 生成网站数据
         env: # 设置环境变量
           ANKIO: ${{ secrets.ANKIO }} # toKen私密变量  
-        run: cd ./build && yarn build
+        run: cd ./build && yarn deploy
     
-      - name: 处理文件夹
-        run: cd docs/.vuepress/dist  && ls 
-        # package.json 中添加 "deploy": "bash deploy.sh"
+
