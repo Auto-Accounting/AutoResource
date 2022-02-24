@@ -20,7 +20,7 @@ jobs: # 工作流
         uses: actions/setup-node@v1 # 作用：安装nodejs
         with:
           node-version: ${{ matrix.node-version }} # 版本
-      - name: run ./docs/deploy.sh # 步骤3 （同时部署到github和coding）
+      - name: run ./build/deploy.sh # 步骤3 （同时部署到github和coding）
         env: # 设置环境变量
           GITHUB_TOKEN: ${{ secrets.ANKIO }} # toKen私密变量
 
