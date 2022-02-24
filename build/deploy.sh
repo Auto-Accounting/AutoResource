@@ -11,7 +11,7 @@ if [ -z "$ANKIO" ]; then
   githubUrl=git@github.com:dreamncn/AutoResource.git
 else
   msg='来自github action的自动部署'
-  githubUrl=https://dreamncn:${GITHUB_TOKEN}@github.com/dreamncn/AutoResource.git
+  githubUrl=https://dreamncn:${ANKIO}@github.com/dreamncn/AutoResource.git
   git config --global user.name "ankio"
   git config --global user.email "dream@dreamn.cn"
 fi
