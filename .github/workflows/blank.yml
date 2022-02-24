@@ -25,7 +25,7 @@ jobs: # 工作流
       - name: 环境配置
         env: 
           YARN_ENABLE_IMMUTABLE_INSTALLS : false
-        run: cd ./build &&  yarn set version berry && yarn install && yarn add markdown-it-emoji && yarn add @vuepress/shared-utils
+        run: cd ./build &&  yarn set version berry && yarn install #&& yarn add markdown-it-emoji && yarn add @vuepress/shared-utils
         
       - name: 生成网站数据
         env: # 设置环境变量
