@@ -1,8 +1,14 @@
 #!/usr/bin/env sh
 # 确保脚本抛出遇到的错误
 set -e
+echo "build html"
 yarn build # 生成静态文件
+
+echo "build success"
+
 cd docs/.vuepress/dist # 进入生成的文件夹
+
+echo "cd docs/.vuepress/dist"
 # deploy to github
 echo 'auto.ankio.net' > CNAME
 if [ -z "$ANKIO" ]; then
