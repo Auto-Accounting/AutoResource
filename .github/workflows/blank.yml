@@ -24,5 +24,5 @@ jobs: # 工作流
         env: # 设置环境变量
           GITHUB_TOKEN: ${{ secrets.ANKIO }} # toKen私密变量
 
-        run: cd ./build && npm install && npm run deploy # 执行的命令  
+        run: cd ./build && yarn install && yarn run deploy # 执行的命令  
         # package.json 中添加 "deploy": "bash deploy.sh"
