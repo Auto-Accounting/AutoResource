@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dd6fa589-457d-4073-821d-14a7d2a8c99c" name="Changes" comment="feat:add more docs" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="230UNQj4sl2hZUa4DgOyfusUjYL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/01.指南/06.问题篇" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/01.指南/06.问题篇" />
+      <recent name="$PROJECT_DIR$/docs/01.指南/06.其他/01.贡献代码" />
+      <recent name="$PROJECT_DIR$/docs/01.指南/02.基础篇/03.自动记账配置" />
+      <recent name="$PROJECT_DIR$/docs/01.指南/02.基础篇" />
+      <recent name="$PROJECT_DIR$/docs/03.网盘" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/01.指南" />
+      <recent name="$PROJECT_DIR$/docs/01.指南/06.其他/01.贡献代码" />
+      <recent name="$PROJECT_DIR$/docs/01.指南/02.基础篇/02.自动记账配置" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.dev">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/node_modules/js-yaml/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dd6fa589-457d-4073-821d-14a7d2a8c99c" name="Changes" comment="" />
+      <created>1640870458059</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1640870458059</updated>
+      <workItem from="1640870461058" duration="57154000" />
+      <workItem from="1641087899735" duration="14921000" />
+      <workItem from="1641287090200" duration="1391000" />
+      <workItem from="1641299402734" duration="9066000" />
+      <workItem from="1641358966464" duration="748000" />
+      <workItem from="1641369221809" duration="3343000" />
+      <workItem from="1641557352949" duration="8681000" />
+      <workItem from="1641608631717" duration="1813000" />
+      <workItem from="1641623235536" duration="58000" />
+      <workItem from="1641954052022" duration="631000" />
+      <workItem from="1642239923602" duration="7000" />
+      <workItem from="1644548975296" duration="4137000" />
+      <workItem from="1644568129008" duration="15604000" />
+      <workItem from="1644672464725" duration="5153000" />
+      <workItem from="1645695818488" duration="1316000" />
+    </task>
+    <task id="LOCAL-00001" summary="add">
+      <created>1641032569816</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1641032569816</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat:new doc">
+      <created>1641565665501</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1641565665502</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat:new doc">
+      <created>1641565677404</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1641565677404</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat:add more docs">
+      <created>1644650874914</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1644650874914</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="add" />
+    <MESSAGE value="feat:new doc" />
+    <MESSAGE value="feat:add more docs" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:add more docs" />
+  </component>
+</project>
