@@ -23,7 +23,7 @@ jobs: # 工作流
           node-version: ${{ matrix.node-version }} # 版本
           
       - name: 环境配置
-        run: cd ./build &&  yarn set version berry  
+        run: cd ./build &&  yarn set version berry && yarn install 
         
       - name: 生成网站数据
         env: # 设置环境变量
