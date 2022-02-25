@@ -1,12 +1,15 @@
-name: CI
+name: 文档发布构建流程
 
 # 在master分支发生push事件时触发。
 on: 
   push:
     branches:
       - master
+    paths:
+      - 'build/**' #只有提交到build的文档数据才触发构建
+
 jobs: # 工作流
-  build:
+  build_docs_and_tools:
     runs-on: ubuntu-latest #运行在虚拟机环境ubuntu-latest
 
     strategy:
@@ -14,10 +17,10 @@ jobs: # 工作流
         node-version: [14]
 
     steps: 
-      - name: Checkout # 步骤1
+      - name: 拉取仓库 # 步骤1
         uses: actions/checkout@v1 # 使用的动作。格式：userName/repoName。作用：检出仓库，获取源码。 官方actions库：https://github.com/actions
         
-      - name: Use Node.js ${{ matrix.node-version }} # 步骤2
+      - name: 拉取 Node.js ${{ matrix.node-version }} # 步骤2
         uses: actions/setup-node@v1 # 作用：安装nodejs
         with:
           node-version: ${{ matrix.node-version }} # 版本
@@ -25,8 +28,8 @@ jobs: # 工作流
       - name: 环境配置
         env: 
           YARN_ENABLE_IMMUTABLE_INSTALLS : false
-        run: cd ./build &&  rm -rf node_modules && rm -f yarn.lock && yarn install #&&  yarn set version berry && yarn install && yarn add markdown-it-emoji && yarn add @vuepress/shared-utils && yarn add lru-cache && yarn add @vue/component-compiler-utils && yarn add escape-html
-        
+        run: cd ./build/auto-docs &&  rm -rf node_modules && rm -f yarn.lock && yarn install
+
       - name: 生成网站数据
         env: # 设置环境变量
           ANKIO: ${{ secrets.ANKIO }} # toKen私密变量  
