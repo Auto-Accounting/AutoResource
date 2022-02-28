@@ -1,0 +1,40 @@
+@import 'common/var';
+@import './date-picker/picker.scss';
+@import './date-picker/date-picker.scss';
+@import './scrollbar.scss';
+@import './popper';
+@import './input.scss';
+@import './select.scss';
+@import './option.scss';
+
+.time-select {
+  margin: 5px 0;
+  min-width: 0;
+
+  .#{$namespace}-picker-panel__content {
+    max-height: 200px;
+    margin: 0;
+  }
+
+  &-item {
+    padding: 8px 10px;
+    font-size: 14px;
+    line-height: 20px;
+
+    &.disabled {
+      color: var(--el-datepicker-border-color);
+      cursor: not-allowed;
+    }
+
+    &:hover {
+      background-color: $--background-color-base;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+
+  .time-select-item.selected:not(.disabled) {
+    color: var(--el-color-primary);
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,152 @@
+@use "sass:map";
+
+@import 'mixins/mixins';
+@import 'mixins/var';
+@import 'common/var';
+
+@include b(tag) {
+  @include set-component-css-var('tag', $--tag);
+}
+
+@mixin genTheme(
+  $backgroundColorWeight,
+  $borderColorWeight,
+  $fontColorWeight,
+  $hoverColorWeight
+) {
+  --el-tag-background-color: #{mix(
+      map.get($--tag-color, 'primary'),
+      $--color-white,
+      $backgroundColorWeight
+    )};
+  --el-tag-border-color: #{mix(
+      map.get($--tag-color, 'primary'),
+      $--color-white,
+      $borderColorWeight
+    )};
+  --el-tag-font-color: #{mix(
+      map.get($--tag-color, 'primary'),
+      $--color-white,
+      $fontColorWeight
+    )};
+  --el-tag-hover-color: #{mix(
+      map.get($--tag-color, 'primary'),
+      $--color-white,
+      $hoverColorWeight
+    )};
+
+  background-color: var(--el-tag-background-color);
+  border-color: var(--el-tag-border-color);
+  color: var(--el-tag-font-color);
+
+  @include when(hit) {
+    border-color: map.get($--tag-color, 'primary');
+  }
+
+  .#{$namespace}-tag__close {
+    color: var(--el-tag-font-color);
+    &:hover {
+      color: var(--el-color-white);
+      background-color: var(--el-tag-hover-color);
+    }
+  }
+
+  @each $type in $--types {
+    &.#{$namespace}-tag--#{$type} {
+      --el-tag-background-color: #{mix(
+          map.get($--tag-color, $type),
+          $--color-white,
+          $backgroundColorWeight
+        )};
+      --el-tag-border-color: #{mix(
+          map.get($--tag-color, $type),
+          $--color-white,
+          $borderColorWeight
+        )};
+      --el-tag-font-color: #{mix(
+          map.get($--tag-color, $type),
+          $--color-white,
+          $fontColorWeight
+        )};
+      --el-tag-hover-color: #{mix(
+          map.get($--tag-color, $type),
+          $--color-white,
+          $hoverColorWeight
+        )};
+
+      @include when(hit) {
+        border-color: map.get($--tag-color, $type);
+      }
+    }
+  }
+}
+
+@include b(tag) {
+  @include genTheme(10%, 20%, 100%, 100%);
+  display: inline-block;
+  height: 32px;
+  padding: var(--el-tag-padding);
+  line-height: 30px;
+  font-size: var(--el-tag-font-size);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: var(--el-tag-border-radius);
+  box-sizing: border-box;
+  white-space: nowrap;
+
+  .#{$namespace}-icon-close {
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    font-size: 12px;
+    height: 16px;
+    width: 16px;
+    line-height: 16px;
+    vertical-align: middle;
+    top: -1px;
+    right: -5px;
+
+    &::before {
+      display: block;
+    }
+  }
+
+  @include m(dark) {
+    @include genTheme(100%, 100%, 0, 80%);
+  }
+
+  @include m(plain) {
+    @include genTheme(0, 40%, 100%, 100%);
+  }
+
+  @include m(medium) {
+    height: 28px;
+    line-height: 26px;
+
+    .#{$namespace}-icon-close {
+      transform: scale(0.8);
+    }
+  }
+
+  @include m(small) {
+    height: 24px;
+    padding: 0 8px;
+    line-height: 22px;
+
+    .#{$namespace}-icon-close {
+      transform: scale(0.8);
+    }
+  }
+
+  @include m(mini) {
+    height: 20px;
+    padding: 0 5px;
+    line-height: 19px;
+
+    .#{$namespace}-icon-close {
+      margin-left: -3px;
+      transform: scale(0.7);
+    }
+  }
+}

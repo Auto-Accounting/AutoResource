@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <meta content="webkit" name="renderer">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <title>规则编辑</title>
+    <link href="../style/layui/css/layui.css" rel="stylesheet">
+    <link href="../style/css/style.css" rel="stylesheet">
+    <link href="../style/css/regex.css" rel="stylesheet">
+    <style>
+        .layui-form-item .layui-form-select {
+            width: 100%;
+        }
+
+        .layui-form-item .layui-select-title .layui-input {
+            color: black;
+            text-align: left;
+            border-radius: 10px;
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+<div style="padding: 15px;">
+    <form action="" class="layui-form layui-form-pane" id="form" lay-filter="form">
+        <input autocomplete="off" class="layui-input" name="id" value="" style="display: none" type="text">
+        <input autocomplete="off" class="layui-input" name="identify" id="identify" value="" style="display: none" type="text">
+        <input autocomplete="off" class="layui-input" name="dataId" value="" style="display: none" type="text">
+        <input autocomplete="off" class="layui-input" name="version" value="1" style="display: none" type="text">
+
+        <div class="label-title">规则名称</div>
+        <input autocomplete="off" class="layui-input" name="regular_name" id="regular_name" placeholder="规则名称" type="text">
+        <div class="label-title">规则备注</div>
+        <textarea style="margin-bottom: 15px" class="layui-textarea" name="regular_remark" id="regular_remark"
+                  placeholder="使用注意事项、作者信息等..."></textarea>
+        <div class="label-title">APP包名/短信发件人号码</div>
+        <div class="layui-form-item" style="position: relative;">
+            <input autocomplete="off" class="layui-input" name="regular_app" id="regular_app" placeholder="APP包名/短信发件人号码" type="text">
+            <img src="../style/img/category_right.png" id="img" data-dom="regular_app" class="img">
+        </div>
+        <div class="label-title">正则表达式</div>
+        <div class="main " style="background-color: #fff">
+            <div class="inner">
+                <div id="regex">
+                    <h4>常用正则：</h4>
+                    <ul class="clearfix">
+                        <li><a data-reg="(\d+(\.\d+)?)" href="javascript:;">浮点数</a></li>
+                        <li><a data-reg="(\d{4})" href="javascript:;">4位整数</a></li>
+                        <li><a data-reg="(((?!支付宝|微信).)*)" href="javascript:;">不包含『支付宝』『微信』的字符串</a></li>
+                        <li><a data-reg="(.*)" href="javascript:;">任意不换行字符(分组)</a></li>
+                        <li><a data-reg=".*" href="javascript:;">任意不换行字符(不分组)</a></li>
+                    </ul>
+                </div>
+
+                <div class="regex-wrapper mgb10">
+                    <textarea cols="1000" id="regex_input" name="regex_input" rows="3" style="display: none;"
+                              tabindex="1"></textarea>
+                </div>
+                <div class="label-title">测试数据</div>
+                <div class="str-wrapper">
+                    <textarea cols="100" id="str_input" name="str_input" rows="10" style="display: none;"
+                              tabindex="2"></textarea>
+                </div>
+                <h3 style="display: none">共找到 <var id="result_count">0</var> 处匹配结果</h3>
+                <pre id="result_content" style="display: none"></pre>
+                <h3>共找到 <var id="result_count2">0</var> 处分组结果</h3>
+                <pre id="result_content2"></pre>
+            </div>
+        </div>
+        <div class="label-title">匹配项目所在位置</div>
+        <div class="label-sub-title">收支类型</div>
+        <div class="layui-form-item" style="position: relative;">
+            <select name="type" id="type" lay-filter="type" style="width: 100%;">
+                <option value="0" selected="selected">支出</option>
+                <option value="1">收入</option>
+                <option value="2">转账</option>
+                <option value="3">信用还款</option>
+            </select>
+        </div>
+
+        <div class="account1_area">
+            <div class="label-sub-title account1">支出账户</div>
+            <div class="layui-form-item" style="position: relative;">
+                <input autocomplete="off" class="layui-input" name="account_name1" id="account_name1" placeholder="使用$1、$2或直接填写" type="text">
+                <img src="../style/img/category_right.png" data-dom="account_name1" class="img">
+            </div>
+        </div>
+
+        <div class="account2_area">
+            <div class="label-sub-title account2">转入账户</div>
+            <div class="layui-form-item" style="position: relative;">
+                <input autocomplete="off" class="layui-input" name="account_name2" id="account_name2" placeholder="使用$1、$2或直接填写" type="text">
+                <img src="../style/img/category_right.png" data-dom="account_name2" class="img">
+            </div>
+        </div>
+
+        <div class="label-sub-title">金额</div>
+        <div class="layui-form-item" style="position: relative;">
+            <input autocomplete="off" class="layui-input" name="money" id="money" placeholder="使用$1、$2或直接填写" type="text">
+            <img src="../style/img/category_right.png" data-dom="money" class="img">
+        </div>
+        <div class="fee_area">
+            <div class="label-sub-title fee">手续费</div>
+            <div class="layui-form-item" style="position: relative;">
+                <input autocomplete="off" class="layui-input" name="fee" id="fee" placeholder="没有留空" type="text">
+                <img src="../style/img/category_right.png" data-dom="fee" class="img">
+            </div>
+        </div>
+
+        <div class="label-sub-title">商户名称</div>
+        <div class="layui-form-item" style="position: relative;">
+            <input autocomplete="off" class="layui-input" name="shopName" id="shopName" placeholder="使用$1、$2或直接填写" type="text">
+            <img src="../style/img/category_right.png" data-dom="shopName" class="img">
+        </div>
+
+        <div class="label-sub-title">商户备注</div>
+        <div class="layui-form-item" style="position: relative;">
+            <input autocomplete="off" class="layui-input" name="shopRemark" id="shopRemark" placeholder="使用$1、$2或直接填写" type="text">
+            <img src="../style/img/category_right.png" data-dom="shopRemark" class="img">
+        </div>
+
+        <div class="label-sub-title">时间</div>
+        <div class="layui-form-item" style="position: relative;">
+            <input autocomplete="off" class="layui-input" name="time" id="time" placeholder="没有留空" type="text">
+            <img src="../style/img/category_right.png" data-dom="time" class="img">
+        </div>
+        <div class="label-sub-title">直接记账</div>
+        <div class="layui-form-item" style="position: relative;">
+            <select name="auto" id="auto" lay-filter="auto" style="width: 100%;">
+                <option value="0" selected="selected">否</option>
+                <option value="1">是</option>
+            </select>
+        </div>
+
+        <div class="layui-form-item" style="text-align: center;margin-top: 10px">
+            <button class="layui-btn" lay-filter="test" id="test" type="button">测试</button>
+            <button class="layui-btn" lay-filter="save" id="save" type="button">保存</button>
+        </div>
+    </form>
+</div>
+<script src="../style/layui/layui.js"></script>
+<script>
+    window.jQuery = layui.$;
+</script>
+<script src="../style/js/regex_1.js"></script>
+<script src="../style/js/regex_2.js"></script>
+<script>
+
+    let webviewCallback;//用于外部调用
+    let url = window.location.href,baseurl = '../style/js/';
+
+    //解决相对路径问题
+    //调用
+    layui.config({
+        base: baseurl //假设这是test.js所在的目录   可以把你需要扩展的js插件都放在一个文件夹内
+    }).extend({ //设定组件别名
+        common: 'common',
+        baseFamily: 'baseFamily',
+        webview: 'webview'
+    });
+
+    layui.use(['layer', 'form', 'common','baseFamily', 'webview'], function ()
+    {
+        const layer = layui.layer
+            , form = layui.form
+            , common = layui.common
+            , webview = layui.webview,
+            baseFamily = layui.baseFamily,
+            $=layui.$;
+
+        let regexData = null;
+        String.format = function () {
+            let s = arguments[0];
+            for (let i = 0; i < arguments.length - 1; i++) {
+                const reg = new RegExp("%s", "m");
+                s = s.replace(reg, arguments[i + 1]);
+            }
+            return s;
+        };
+
+        window.addEventListener("message",function (event) {
+            webviewCallback.setData(baseFamily.enctype(event.data.data,"base16"),event.data.type)
+        });
+        webviewCallback = {
+            setData: function (data,type) {
+                if(data===""||data==null||type===""||type==null)return;
+                console.log(data,type)
+                //设置自动保存
+                common.restore("form", "auto_reg_"+type);
+                common.restoreFromData("form",baseFamily.decrypt(data,"base16"));
+                common.autoSave("form",  "auto_reg_"+type);
+                if(type==="sms"){
+                    $("title").html("短信规则编辑")
+                }else if(type==="app"){
+                    $("title").html("app规则编辑")
+                }else if(type==="notice"){
+                    $("title").html("通知规则编辑")
+                }else if(type==="helper"){
+                    $("title").html("无障碍规则编辑")
+                }
+                setArea($("#type").val());
+            },
+            setSelect: function (dom, data) {
+                const jq = layui.$("input[name=" + dom + "]");
+                jq.val(jq.val() + data);
+            }
+        };
+
+
+
+        function getJs() {
+            var data = "var d,e,f,g,h,i;try{if(pattern=/%s/,pattern.test(a)){for(d=pattern.exec(a),e=\"%s##%s##%s##%s##%s##%s##%s##%s##%s\",f=e.split(\"##\"),g=\"\",h=0;h<f.length;h++)i=f[h],g+=-1!=i.indexOf(\"$+\")?b(d,i,\"$+\")+\"##\":-1!=i.indexOf(\"$-\")?b(d,i,\"$-\")+\"##\":-1!=i.indexOf(\"$|\")?b(d,i,\"$|\")+\"##\":i+\"##\";return g=g.slice(0,g.length-2),c(d,g)}}catch(j){}";
+
+            var value = form.val("form");
+            console.log(JSON.stringify(value));
+            //获取名称
+            if (value.regular_name === "") {
+                webview.toast("规则名称不能为空");
+                return "";
+            }
+            //获取名称
+
+            if (value.regex_input === "") {
+                webview.toast("正则不能为空");
+                return "";
+            }
+            if (value.str_input === "") {
+                webview.toast("测试文本不能为空");
+                return "";
+            }
+            data = String.format(data, value.regex_input, value.shopRemark,value.account_name1, value.type, value.money,  value.account_name2, value.shopName,value.fee, value.time,value.auto);
+            console.log(data);
+            return data;
+        }
+
+        layui.$("#result_count").bind("DOMSubtreeModified", function (e) {
+            var data = layui.$("#regex_input").val();
+            var str = "";
+            var len = 1;
+            try {
+                var pattern = eval("/" + data + "/");
+                if (pattern.test(layui.$("#str_input").val())) {
+                    var array = pattern.exec(layui.$("#str_input").val());
+                    regexData = array;
+                    // console.log(array)
+                    len = array.length;
+                    for (var i = 1; i < len; i++) {
+                        str += "<b>【$" + i + "】</b> " + array[i] + "<br>";
+                    }
+                }
+            } catch (e) {
+            }
+            layui.$("#result_count2").html((len - 1).toString());
+            layui.$("#result_content2").html(str);
+        });
+
+        layui.$("#save").on("click", function (e) {
+            webview.saveReg(getJs(), JSON.stringify(form.val("form")))
+            common.cleanSave("auto_reg_"+$("#identify").val());
+        });
+
+        layui.$("#test").on("click", function (e) {
+            try {
+                const js = getJs();
+                if (js !== "") webview.testReg(js,$("#identify").val(),$("#regular_app").val(),$("#str_input").val());
+            } catch (e) {
+                console.log(e.toString())
+            }
+        });
+
+        layui.$("img").on('click', function () {
+            const dom = layui.$(this).data("dom");
+            if (regexData === null&&dom!=="regular_app") return;
+            webview.selectReg(dom, JSON.stringify(regexData));
+        });
+
+        function setArea(type){
+            layui.$(".account2_area").css("display", "block");
+            layui.$(".fee_area").css("display", "block");
+            if (type === "0") {
+                layui.$(".account1").html("支出账户");
+                layui.$(".account2_area").css("display", "none");
+                layui.$(".fee_area").css("display", "none");
+            } else if (type === "1") {
+                layui.$(".account1").html("收入账户");
+                layui.$(".account2_area").css("display", "none");
+                layui.$(".fee_area").css("display", "none");
+            } else if (type === "2") {
+                layui.$(".account1").html("转出账户");
+                layui.$(".account2").html("转入账户");
+            } else {
+                layui.$(".account1").html("付款账户");
+                layui.$(".account2").html("还入账户");
+            }
+            form.render();
+        }
+        form.on('select(type)', function (data) {
+            setArea(data.value);
+        });
+        webview.initData();
+    }
+);
+</script>
+</body>
+</html>

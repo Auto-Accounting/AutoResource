@@ -1,0 +1,299 @@
+@import 'mixins/mixins';
+@import 'mixins/var';
+@import 'mixins/utils';
+@import 'common/var';
+@import 'common/transition';
+@import 'tooltip';
+
+@mixin menu-item {
+  height: 56px;
+  line-height: 56px;
+  font-size: var(--el-menu-item-font-size);
+  color: var(--el-menu-item-font-color);
+  padding: 0 20px;
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+  transition: border-color var(--el-transition-duration),
+    background-color var(--el-transition-duration),
+    color var(--el-transition-duration);
+  box-sizing: border-box;
+  white-space: nowrap;
+
+  * {
+    vertical-align: middle;
+  }
+
+  i {
+    color: var(--el-text-color-secondary);
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: var(--el-menu-item-hover-fill);
+  }
+
+  @include when(disabled) {
+    opacity: 0.25;
+    cursor: not-allowed;
+    background: none !important;
+  }
+}
+
+@include b(menu) {
+  @include set-component-css-var('menu', $--menu);
+
+  border-right: solid 1px var(--el-menu-border-color);
+  list-style: none;
+  position: relative;
+  margin: 0;
+  padding-left: 0;
+  background-color: var(--el-menu-background-color);
+  @include utils-clearfix;
+  &.#{$namespace}-menu--horizontal {
+    border-bottom: solid 1px var(--el-menu-border-color);
+  }
+
+  @include m(horizontal) {
+    border-right: none;
+    & > .#{$namespace}-menu-item {
+      float: left;
+      height: 60px;
+      line-height: 60px;
+      margin: 0;
+      border-bottom: 2px solid transparent;
+      color: var(--el-text-color-secondary);
+
+      a,
+      a:hover {
+        color: inherit;
+      }
+
+      &:not(.is-disabled):hover,
+      &:not(.is-disabled):focus {
+        background-color: #fff;
+      }
+    }
+    & > .#{$namespace}-submenu {
+      float: left;
+
+      &:focus,
+      &:hover {
+        outline: none;
+      }
+
+      &:hover {
+        .#{$namespace}-submenu__title {
+          color: var(--el-text-color-primary);
+        }
+      }
+
+      &.is-active {
+        .#{$namespace}-submenu__title {
+          border-bottom: 2px solid var(--el-color-primary);
+          color: var(--el-text-color-primary);
+        }
+      }
+
+      & .#{$namespace}-submenu__title {
+        height: 60px;
+        line-height: 60px;
+        border-bottom: 2px solid transparent;
+        color: var(--el-text-color-secondary);
+
+        &:hover {
+          background-color: #fff;
+        }
+      }
+      & .#{$namespace}-submenu__icon-arrow {
+        position: static;
+        vertical-align: middle;
+        margin-left: 8px;
+        margin-top: -3px;
+      }
+    }
+    & .#{$namespace}-menu {
+      & .#{$namespace}-menu-item,
+      & .#{$namespace}-submenu__title {
+        background-color: $--color-white;
+        float: none;
+        height: 36px;
+        line-height: 36px;
+        padding: 0 10px;
+        color: var(--el-text-color-secondary);
+      }
+      & .#{$namespace}-menu-item.is-active,
+      & .#{$namespace}-submenu.is-active > .#{$namespace}-submenu__title {
+        color: var(--el-text-color-primary);
+      }
+    }
+    & .#{$namespace}-menu-item:not(.is-disabled):hover,
+    & .#{$namespace}-menu-item:not(.is-disabled):focus {
+      outline: none;
+      color: var(--el-text-color-primary);
+    }
+    & > .#{$namespace}-menu-item.is-active {
+      border-bottom: 2px solid var(--el-color-primary);
+      color: var(--el-text-color-primary);
+    }
+  }
+  @include m(collapse) {
+    width: 64px;
+
+    > .#{$namespace}-menu-item,
+    > .#{$namespace}-submenu > .#{$namespace}-submenu__title {
+      [class^='#{$namespace}-icon-'] {
+        margin: 0;
+        vertical-align: middle;
+        width: 24px;
+        text-align: center;
+      }
+      .#{$namespace}-submenu__icon-arrow {
+        display: none;
+      }
+      span {
+        height: 0;
+        width: 0;
+        overflow: hidden;
+        visibility: hidden;
+        display: inline-block;
+      }
+    }
+
+    > .#{$namespace}-menu-item.is-active i {
+      color: inherit;
+    }
+
+    .#{$namespace}-menu .#{$namespace}-submenu {
+      min-width: 200px;
+    }
+
+    .#{$namespace}-submenu {
+      position: relative;
+      & .#{$namespace}-menu {
+        position: absolute;
+        margin-left: 5px;
+        top: 0;
+        left: 100%;
+        z-index: 10;
+        border: 1px solid var(--el-border-color-light);
+        border-radius: var(--el-border-radius-small);
+        box-shadow: var(--el-box-shadow-light);
+      }
+
+      &.is-opened {
+        > .#{$namespace}-submenu__title .#{$namespace}-submenu__icon-arrow {
+          transform: none;
+        }
+      }
+
+      &.is-active i {
+        color: var(--el-color-primary);
+      }
+    }
+  }
+  @include m(popup) {
+    z-index: 100;
+    min-width: 200px;
+    border: none;
+    padding: 5px 0;
+    border-radius: var(--el-border-radius-small);
+    box-shadow: var(--el-box-shadow-light);
+  }
+}
+@include b(menu-item) {
+  @include menu-item;
+
+  & [class^='#{$namespace}-icon-'] {
+    margin-right: 5px;
+    width: 24px;
+    text-align: center;
+    font-size: 18px;
+    vertical-align: middle;
+  }
+  @include when(active) {
+    color: var(--el-color-primary);
+    i {
+      color: inherit;
+    }
+  }
+}
+
+@include b(submenu) {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+
+  @include e(title) {
+    @include menu-item;
+
+    &:hover {
+      background-color: var(--el-menu-item-hover-fill);
+    }
+  }
+  & .#{$namespace}-menu {
+    border: none;
+  }
+  & .#{$namespace}-menu-item {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 45px;
+    min-width: 200px;
+  }
+  @include e(icon-arrow) {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    margin-top: -7px;
+    transition: transform var(--el-transition-duration);
+    font-size: 12px;
+  }
+  @include when(active) {
+    .#{$namespace}-submenu__title {
+      border-bottom-color: var(--el-color-primary);
+    }
+  }
+  @include when(opened) {
+    > .#{$namespace}-submenu__title .#{$namespace}-submenu__icon-arrow {
+      transform: rotateZ(180deg);
+    }
+  }
+  @include when(disabled) {
+    .#{$namespace}-submenu__title,
+    .#{$namespace}-menu-item {
+      opacity: 0.25;
+      cursor: not-allowed;
+      background: none !important;
+    }
+  }
+  [class^='#{$namespace}-icon-'] {
+    vertical-align: middle;
+    margin-right: 5px;
+    width: 24px;
+    text-align: center;
+    font-size: 18px;
+  }
+}
+
+@include b(menu-item-group) {
+  > ul {
+    padding: 0;
+  }
+  @include e(title) {
+    padding: 7px 0 7px 20px;
+    line-height: normal;
+    font-size: 12px;
+    color: var(--el-text-color-secondary);
+  }
+}
+
+.horizontal-collapse-transition
+  .#{$namespace}-submenu__title
+  .#{$namespace}-submenu__icon-arrow {
+  transition: var(--el-transition-duration-fast);
+  opacity: 0;
+}
