@@ -25,15 +25,15 @@ jobs: # 工作流
         with:
           node-version: ${{ matrix.node-version }} # 版本
           
-      - name: Doc环境配置
+      - name: Doc环境配置和编译
         env: 
           YARN_ENABLE_IMMUTABLE_INSTALLS : false
-        run: cd ./build/auto-docs  && yarn install
+        run: cd ./build/auto-docs  && yarn install && yarn build
 
-      - name: Tools环境配置
+      - name: Tools环境配置和编译
         env:
           YARN_ENABLE_IMMUTABLE_INSTALLS: false
-        run: cd ./build/auto-tools  && yarn install
+        run: cd ./build/auto-tools  && yarn install && yarn build
 
       - name: 网站部署
         env: # 设置环境变量
