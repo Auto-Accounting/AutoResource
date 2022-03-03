@@ -38,6 +38,6 @@ jobs: # 工作流
       - name: 网站部署
         env: # 设置环境变量
           ANKIO: ${{ secrets.ANKIO }} # toKen私密变量  
-        run: echo "over" #cd ./build && bash deploy.sh
+        run: cd ./build && bash deploy.sh
     
 
