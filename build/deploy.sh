@@ -1,7 +1,9 @@
 #!/usr/bin/env sh
 # 确保脚本抛出遇到的错误
 set -e
+
 ls ./build/auto-tools/dist
+#拷贝到tools文件夹
 cp ./build/auto-tools/dist  ./build/auto-docs/docs/.vuepress/dist/tools
 cd ./build/auto-docs/docs/.vuepress/dist # 进入DOC
 # deploy to github
