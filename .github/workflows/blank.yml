@@ -28,12 +28,12 @@ jobs: # 工作流
       - name: Doc环境配置和编译
         env: 
           YARN_ENABLE_IMMUTABLE_INSTALLS : false
-        run: cd ./build/auto-docs  && yarn install && yarn build
+        run: cd ./build/auto-docs && yarn config set registry https://registry.npmjs.org/ && yarn install && yarn build
 
       - name: Tools环境配置和编译
         env:
           YARN_ENABLE_IMMUTABLE_INSTALLS: false
-        run: cd ./build/auto-tools  && yarn install && yarn build
+        run: cd ./build/auto-tools   && yarn config set registry https://registry.npmjs.org/  && yarn install && yarn build
 
       - name: 网站部署
         env: # 设置环境变量
