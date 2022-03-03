@@ -31,9 +31,9 @@ jobs: # 工作流
         run: cd ./build/auto-docs  && yarn install
 
       - name: Tools环境配置
-          env:
-            YARN_ENABLE_IMMUTABLE_INSTALLS: false
-          run: cd ./build/auto-tools  && yarn install
+        env:
+          YARN_ENABLE_IMMUTABLE_INSTALLS: false
+        run: cd ./build/auto-tools  && yarn install
 
       - name: 网站部署
         env: # 设置环境变量
