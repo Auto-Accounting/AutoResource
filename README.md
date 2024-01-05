@@ -1,2 +1,2 @@
-# AutoResource
-自动记账资源提交平台，由GitBot自动化管理。
+# 警告
+由于少年丢失了2FA凭证，本仓库迁移至：[AutoAccountingOrg/AutoResource](https://github.com/AutoAccountingOrg/AutoResource)，该仓库**不再受理PR、ISSUE**，如需提交请至新仓库。
